@@ -70,7 +70,7 @@
 }
 #page-home main a:hover {
 
-    background-color: #37e086;
+    background-color: var(--transition-color);
 }
 #page-home main a span {
 
