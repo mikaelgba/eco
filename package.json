@@ -1,0 +1,22 @@
+{
+  "name": "eco",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikaelgba/eco.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mikaelgba/eco/issues"
+  },
+  "homepage": "https://github.com/mikaelgba/eco#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
