@@ -9,9 +9,9 @@
 
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,300&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="../../public/css/main.css">
-        <link rel="stylesheet" href="../../public/css/create-point.css">
-        <link rel="stylesheet" href="../../public/css/reponsive.css">
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/create-point.css">
+        <link rel="stylesheet" href="/css/reponsive.css">
 
     </head>
 
@@ -19,15 +19,7 @@
 
         <div id="page-create-point">
 
-                <header>
-    
-                    <img src="../../public/assests/logo.svg" alt="Logomarca">
-                    <a href="index.html">
-                        <span></span>
-                        Voltar para Home
-                    </a>
-                    
-                </header>
+                {% include "partials/page-header.html" %}
 
                 <form action="">
 
@@ -87,32 +79,32 @@
 
                         <div class="itens-grid">
                             <li data-id="1" >
-                                <img src="../../public/assests/lampadas.svg" alt="Lâmpadas">
+                                <img src="/assests/lampadas.svg" alt="Lâmpadas">
                                 <span>Lâmpadas</span>
                             </li>
 
                             <li data-id="2" > 
-                                <img src="../../public/assests/baterias.svg" alt="Pilhas e baterias">
+                                <img src="/assests/baterias.svg" alt="Pilhas e baterias">
                                 <span>Pilhas e baterias</span>
                             </li>
 
                             <li data-id="3">
-                                <img src="../../public/assests/papeis-papelao.svg" alt="Papéis e papelão">
+                                <img src="/assests/papeis-papelao.svg" alt="Papéis e papelão">
                                 <span>Papéis e papelão</span>
                             </li>
 
                             <li data-id="4">
-                                <img src="../../public/assests/eletronicos.svg" alt="Residuos eletronicos">
+                                <img src="/assests/eletronicos.svg" alt="Residuos eletronicos">
                                 <span>Residuos eletronicos</span>
                             </li>
 
                             <li data-id="5"> 
-                                <img src="../../public/assests/organicos.svg" alt="Residuos organicos">
+                                <img src="/assests/organicos.svg" alt="Residuos organicos">
                                 <span>Residuos organicos</span>
                             </li>
 
                             <li data-id="6">
-                                <img src="../../public/assests/oleo.svg" alt="Óleos de cozinha">
+                                <img src="/assests/oleo.svg" alt="Óleos de cozinha">
                                 <span>Óleos de cozinha</span>
                             </li>
 
@@ -125,6 +117,6 @@
 
                 </form>
         </div>
-        <script src="../../public/scripts/create-point.js"></script>     
+        <script src="/scripts/create-point.js"></script>     
     </body>
 </html>
