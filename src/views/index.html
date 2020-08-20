@@ -1,47 +1,38 @@
 {% extends "partials/layout.html" %}
 
-{% set bodyId = "page-home" %}
-        
-        {#Link dinamico para o layout.hatml#}
-        {% block styles %}
-            <link rel="stylesheet" href="/css/home.css">
-            <link rel="stylesheet" href="/css/modal.css">       
-        {% endblock styles %}
-      
-        {% block content %}
-            <div class="content">
+{% set pageId = "page-home" %}
 
-                <header>  
-                    <img src="/assests/logo.svg" alt="Logomarca">
-                    <a href="create-point">
-                        <span></span>
-                        <strong>
-                            Cadastre um ponto de coleta
-                        </strong>      
-                    </a>
-                </header>
+{#Link dinamico para o layout.hatml#}
+{% block styles %}
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/modal.css">
+{% endblock styles %}
 
-                <main>
+{% block content %}
+    <div class="content">
 
-                    <h1>Seu markplace de Coleta de resíduos</h1>
-                    <p>Ajudando a transformar o mundo mais Limpo</p>
+        <header>
+            <img src="/assests/logo.svg" alt="Logomarca">
+            <a href="create-point">
+                <span></span> <strong> Cadastre um ponto de coleta </strong>
+            </a>
+        </header>
 
-                    <a href="#">
-                        <span></span>
-                        <strong>
-                            Encontrar pontos de coleta
-                        </strong>
-                    </a>
-                </main> 
-            </div>
-        {% endblock content %}
+        <main>
+            <h1>Seu markplace de Coleta de resíduos</h1>
+            <p>Ajudando a transformar o mundo mais Limpo</p>
 
-        {% block modal %}
-            {% include "partials/modal.html"%}
-        {% endblock modal %}
+            <a href="#">
+                <span></span> <strong> Encontrar pontos de coleta </strong>
+            </a>
+        </main>
+    </div>
+{% endblock content %}
 
-        {% block scripts %}
-            <script src="/scripts/index.js"></script>
-        {% endblock scripts %}
-    </body>
-</html>
+{% block modal %}
+    {% include "partials/modal.html"%}
+{% endblock modal %}
+
+{% block scripts %}
+    <script src="/scripts/index.js"></script>
+{% endblock scripts %}

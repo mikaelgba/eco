@@ -1,60 +1,43 @@
-<!DOCTYPE html>
-<html lang="pt_br">
+{% extends "partials/layout.html" %}
 
-    <head>
+{% set pageId = "page-search-results" %}
 
-        <title>Resultados da busca</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content= "width=device-width, initial-scale=1.0"> 
+{% block title %}
+    <title>Resultados da busca</title>
+{% endblock title %}
 
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,300&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="/css/main.css">
-        <link rel="stylesheet" href="/css/search-results.css">
-        <link rel="stylesheet" href="/css/reponsive.css">
+{% block styles %}
+    <link rel="stylesheet" href="/css/search-results.css">
+{% endblock styles %}
 
-    </head>
+{% block content %}
 
-    <body>
+    {% include "partials/page-header.html" %} 
+    <main>
+        <h3> <strong> 2 pontos </strong> encontrados </h3>
 
-        <div id="page-search-results">
+        <div class="cards">
+            <div class="card">
+                <img src="https://d33wubrfki0l68.cloudfront.net/761b19ba1b78d95dd38a4500d63c8ba72ff2c5df/7b928/imagens/tsr_papel-01.jpg" alt="Colectoria">
 
-                {% include "partials/page-header.html" %}
+                <h1>Colectoria</h1>
+                <h3>Resíduos Eletronicos, Lâmpadas e afins</h3>
+                <p> Rio do Sul, Santa Catarina - SC </br>
+                    Guilherme Gemalle, Jardim Ámerica </br>
+                    N° 250
+                </p>
+            </div>
 
-                <main>
+            <div class="card">
+                <img src="https://respostas.sebrae.com.br/wp-content/uploads/2020/03/como-a-reciclagem-de-eletronicos-pode-impactar-o-seu-negocio-1-806x440.jpg" alt="Papersider">
 
-                    <h3>
-                        <strong> 2 pontos </strong>
-                        encontrados
-                    </h3>
-
-                    <div class="cards">
-
-                        <div class="card">
-                            <img src="https://d33wubrfki0l68.cloudfront.net/761b19ba1b78d95dd38a4500d63c8ba72ff2c5df/7b928/imagens/tsr_papel-01.jpg" alt="Colectoria">
-
-                            <h1>Colectoria</h1>
-                            <h3>Resíduos Eletronicos, Lâmpadas e afins</h3>
-                            <p>
-                                Rio do Sul, Santa Catarina - SC </br>
-                                Guilherme Gemalle, Jardim Ámerica </br>
-                                N° 250
-                            </p>
-                        </div>
-
-                        <div class="card">
-                            <img src="https://respostas.sebrae.com.br/wp-content/uploads/2020/03/como-a-reciclagem-de-eletronicos-pode-impactar-o-seu-negocio-1-806x440.jpg" alt="Papersider">
-
-                            <h1>Papersider</h1>
-                            <h3>Papéis e Papelão</h3>
-                            <p>
-                                Rio do Sul, Santa Catarina - SC </br>
-                                Guilherme Gemalle, Jardim Ámerica </br>
-                                N° 260
-                            </p>
-                        </div>
-                    </div>
-                </main>
-        </div> 
-    </body>
-</html>
+                <h1>Papersider</h1>
+                <h3>Papéis e Papelão</h3>
+                <p> Rio do Sul, Santa Catarina - SC </br>
+                    Guilherme Gemalle, Jardim Ámerica </br>
+                    N° 260
+                </p>
+            </div>
+        </div>
+    </main>
+{% endblock content %}
