@@ -8,14 +8,14 @@
 
 {% block styles %}
     <link rel="stylesheet" href="/css/create-point.css">
+    <link rel="stylesheet" href="/css/modal.css">
 {% endblock styles %}
 
 {% block content %}
-    <div id="page-create-point">
 
         {% include "partials/page-header.html" %}
 
-        <form action="">
+        <form action="/save-point" method="POST">
             <h1>Cadastro da entidade</h1>
 
             <fieldset>
@@ -70,43 +70,47 @@
                 <legend> <h2>Ítens de coleta</h2> <span>Selecione um ou mais itens abaixo </span></legend>
 
                 <div class="itens-grid">
-                    <li data-id="1">
+                    <li data-id="Lâmpadas">
                         <img src="/assests/lampadas.svg" alt="Lâmpadas">
                         <span>Lâmpadas</span>
                     </li>
 
-                    <li data-id="2">
+                    <li data-id="Pilhas e baterias">
                         <img src="/assests/baterias.svg" alt="Pilhas e baterias">
                         <span>Pilhas e baterias</span>
                     </li>
 
-                    <li data-id="3">
+                    <li data-id="Papéis e papelão">
                         <img src="/assests/papeis-papelao.svg" alt="Papéis e papelão">
                         <span>Papéis e papelão</span>
                     </li>
 
-                    <li data-id="4">
+                    <li data-id="Residuos eletronicos">
                         <img src="/assests/eletronicos.svg" alt="Residuos eletronicos">
                         <span>Residuos eletronicos</span>
                     </li>
 
-                    <li data-id="5">
+                    <li data-id="Residuos organicos">
                         <img src="/assests/organicos.svg" alt="Residuos organicos">
                         <span>Residuos organicos</span>
                     </li>
 
-                    <li data-id="6">
+                    <li data-id="Óleos de cozinha">
                         <img src="/assests/oleo.svg" alt="Óleos de cozinha">
                         <span>Óleos de cozinha</span>
                     </li>
-
                     <input type="hidden" name="itens">
                 </div>
             </fieldset>
             <button type="submit">cadastrar ponto de coleta</button>
         </form>
-    </div>
 {% endblock content %}
+
+{% block modal %}
+    {% if saved %}
+        {%include "partials/point-created.html"%}
+    {% endif %}
+{% endblock modal %}
 
 {% block scripts %}
     <script src="/scripts/create-point.js"></script>

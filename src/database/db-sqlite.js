@@ -4,11 +4,11 @@ const sqlite3 = require('sqlite3').verbose()
 // criando o objeto que acessa o banco 
 const db = new sqlite3.Database("./src/database/database.db")
 
-db.serialize(() => {
+// exportando o banco
+module.exports = db
 
-    const values_test = ["Irineu", 
-    "https://d33wubrfki0l68.cloudfront.net/761b19ba1b78d95dd38a4500d63c8ba72ff2c5df/7b928/imagens/tsr_papel-01.jpg",
-    "ABC", "DEF", "ACRE", "Rio Branco", "Lâmpadas"]
+// apenas test
+/*db.serialize(() => {
 
     const create_db = `CREATE TABLE IF NOT EXISTS Points (id INTEGER PRIMARY KEY AUTOINCREMENT, 
         name TEXT, 
@@ -41,7 +41,7 @@ db.serialize(() => {
         console.log(this)
     }
     //insert
-    //db.run(insert_db, values_test, after_insert)
+    db.run(insert_db, values_test, after_insert)
 
     //select 
     db.all(select_db, function(err, rows){
@@ -53,12 +53,14 @@ db.serialize(() => {
     })
 
     //delete
-    db.run(delete_db, [3], function(err){
+    db.run(delete_db, [4], function(err){
         if(err) { 
             return console.log(err)
         }
         console.log("Registros deletado")
     })
+
+    //select 
     db.all(select_db, function(err, rows){
         if(err) { 
             return console.log(err)
@@ -66,4 +68,4 @@ db.serialize(() => {
         console.log("Registros")
         console.log(rows)
     })
-})
+})*/
